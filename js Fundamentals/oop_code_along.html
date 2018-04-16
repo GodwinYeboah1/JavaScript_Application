@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+    // function test(){
+    //     let awesome = 42;
+    //     var maybe = "Something in here";
+
+    //     if (true){
+    //         let something = "this is randome text ";
+    //         var maybe2 = "this might work";
+    //         console.log(awesome); 
+    //         console.log(maybe);
+    //     }
+    //     // console.log(something);
+    //     console.log(maybe2);
+
+    // }
+    // test()
+
+        function Dot(x,y) {
+            this.x = x;
+            this.y = y;
+
+
+            // this is how you call a method in a slightly different with the prototype keyword
+            Dot.prototype.showlocation = function(){
+                console.log("this is how you call a new method in in java")
+            }
+
+            Dot.prototype.godwinNewLoction = function(){
+                console.log("Godwin this is amazing i love the power of javascript")
+            }
+
+            this.greet =  function(name) {
+                console.log("Welcome, \n" + name + "  here are my masterplan, sorry i forgot to introuduce my self ");
+
+
+            }
+
+        }
+
+        const userG = new Dot(10,12);
+        
+        userG.showlocation()
+        userG.greet("godwn")
+
+
+
+
+        class testing{
+            constructor(name,email,number){
+
+                this.name = name;
+                this.email = email;
+                this.number = number;
+            }
+
+            displayName(){
+                console.log(
+                " FirstName ${this.name} : " + this.name ,"\n",
+                " email : " + this.email,"\n",
+                " number : " + this.number,
+                );
+                return this
+            }
+
+            edit_all(name,email,number){
+
+                // if (name < 5) {
+                //     console.log("name has to be greater then 5");
+                    
+                // }else{
+                //     this.name = name;
+                // }
+
+                this.name = name;
+                this.email = email;
+                this.number = number;
+                return this
+            }
+
+
+        }
+
+        let user1 = new testing("godwinYeboah","godwinyeboah95@gmail.com", "240-273-5704");
+
+        user1.displayName()
+        user1.edit_all("princeYeboah","princeyeboah@gmail.com","301-408-9879").displayName()
+
+        user1.edit_all("tod", '232323','334324324').displayName();
+
+
+
+    // class Dot {
+    // constructor(x, y){
+    //     this.x = x;
+    //     this.y = y;
+    //     this.money = 0;
+    //     console.log("you have created a new Dot");
+
+    //     // calling a methods 5
+    //     this.add = function add(money) {
+    //     this.money += money;
+    //     return this
+    //     }
+    //     // this is how you call a method in a slightly different with the prototype keyword
+    //     Dot.prototype.showlocation = function(){
+    //         console.log("this is how you call a new method in in java")
+    //     }
+
+       
+
+    // }
+    // }
+    // const userD = new Dot(10,12);
+    // userD.add(10).add(10);
+    // const godwin = new Dot(10,15);
+    // godwin.add(100).add(100).add(200).showlocation()
+
+    // console.log(godwin);
+    // console.log(userD);
+    
+    </script>
+</body>
+</html>

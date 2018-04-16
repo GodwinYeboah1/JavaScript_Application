@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            background: black;
+        }
+    #wrapper{
+        background-color: bisque;
+        padding: 10px;
+    }
+    </style>
+
+</head>
+<body>
+    
+    <div id="wrapper">
+
+        <h2>submitted information</h2>
+
+        <p>Your name:  <%=data.data.name%></p>  <br>
+        <p>Your location:  <%=data.data.location%></p>  <br>
+        <p>Your favorite Langauge:   <%=data.data.favLang%></p>  <br>
+        <p>Your comment:  <%=data.data.comment%></p>  <br>
+        <a href='/'><button type="submit"> go back </button> </a>
+    </div>
+</body>
+</html>

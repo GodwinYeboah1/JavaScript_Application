@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+            body{
+                background-color: rgb(48, 45, 45);
+            }
+           
+        #displaySection{
+            border: 2px solid black;
+            border-radius:13px;
+            background-color:cornsilk;
+            padding: 22px;
+            color:black;
+            font-size: 19px;
+            margin: 26px;
+        }
+       
+        #btn{
+            background-color: cadetblue;
+            color: crimson;
+            font-size: 20px;
+        }
+        </style>
+</head>
+<body>
+    <div id="">
+        <a href="/mongoose/new"> <button id="btn" > add More </button></a>
+    </div>
+
+    <div id="displaySection">
+     <!-- displaying all the mongoose  -->
+    <%for(var mongoose in Mongoose) {%>
+       <h3> <a href="/mongooses/<%= Mongoose[mongoose]._id %>"> <%= Mongoose[mongoose].name%></a></h3> 
+        <%= Mongoose[mongoose].age%>
+       <hr>
+    <%}%>
+    </div>
+
+</body>
+</html>

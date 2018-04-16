@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <script>
+
+    
+    
+    function personConstructor(name,age){
+        // create the have , think about what you want to store the info in first
+
+        // create the data sturutre for this person user
+        
+        //  keys are name and age
+        this.name = name;
+        this.age = age;
+
+        this.greet =  function(){
+
+            console.log("hello my name is " + this.name + " and i am " + this.age + "years old");
+        }
+
+        // creating a new methods called goodbye
+        this.goodbye =  function(){
+            console.log("Thank you for visting the shop" + this.name + "before you leave what is your age "+ this.age + "\n goodbye");
+        }
+        return this;
+    }
+    // creating objects or a instances 
+    const godwin =  new personConstructor("godwin", 23);
+    const god =  new personConstructor("god", 1);
+
+    // i want my instance or object to be greet user
+    godwin.greet();
+    godwin.goodbye();
+
+    godwin.greet= function(){
+        console.log("this is a new content");
+    };
+
+    
+    god.greet= function(){
+        console.log("this is a new content");
+    };
+    god.greet();
+    </script>
+    
+</body>
+</html>

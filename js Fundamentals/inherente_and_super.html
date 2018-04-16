@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // parent Dot class
+class Dot {
+   constructor(x, y) {
+        this.x = x;
+        this.y = y;
+            }
+            showLocation() {
+                var g = "this is G"
+
+                console.log(`This Dot is at x ${this.x} and y ${this.y}`);
+                console.log(`this is some i wanted to try ${g} and ${g}`);
+            }
+        }
+        // child Circle class
+        class Circle extends Dot {
+            constructor(x, y, radius) {
+                super(x, y);
+                this.radius = radius;
+            }
+        }
+
+
+        class Name extends Circle{
+            constructor(x,y,radius,Name){
+                super(x,y,radius);
+                this.Name =Name;
+            }
+
+        }
+        // we can now create Circles
+        const circle1 = new Circle(33, 33, 33);
+        const circle3 = new Name(33, 33, 33,"godwin extend a javascript class");
+      console.log("=============")
+        // same attributes as a Dot, plus a radius
+        console.log(circle3);
+        // and Circles can access Dot methods
+        // circle1.showLocation();
+
+
+        // parent Dot class
+class Dot {
+   constructor(x, y) {
+        this.x = x;
+        this.y = y;
+    }
+    showLocation() {
+        console.log(`This Dot is at x ${this.x} and y ${this.y}`);
+    }
+}
+// child Circle class
+class Circle extends Dot {
+    constructor(x, y, radius) {
+        super(x, y);
+        this.radius = radius;
+    }
+}
+// we can now create Circles
+const circle1 = new Circle(33, 33, 33);
+// same attributes as a Dot, plus a radius
+console.log(circle1);
+// and Circles can access Dot methods
+circle1.showLocation();
+copy
+
+
+                
+                
+    
+    
+    </script>
+</body>
+</html>

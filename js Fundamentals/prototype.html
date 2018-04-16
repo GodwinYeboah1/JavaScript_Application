@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+    // const MyObjConstructor = function(name){
+    // const myPrivateVar = "Hello"; // just to show that it is hard to see this private var easily
+    // this.name = name; // but you can see the name!
+    // this.method = function() {
+    // console.log( "I am a method");
+    // };
+
+    // }
+    // const obj1 = new MyObjConstructor('object1');
+    // const obj2 = new MyObjConstructor('object2');
+    // console.log(obj1);
+
+    function Cat(catName) {
+    const name = catName;
+    this.getName = function(){   
+        return name;
+    };
+    }
+
+    // adding a new methods / THE DO
+    Cat.prototype.sayH = function(){
+        console.log("meow");
+    };
+    // 
+    console.log(Cat);
+    Cat.prototype.numlegs = 4;
+    const muffin = new Cat('muffin');
+    const biscuit = new Cat('biscuit');
+    console.log(muffin, biscuit);
+    //we access prototype properties the same way as we would access 'own' properties
+    muffin.sayHi();
+    biscuit.sayHi();
+    console.log(muffin.numLegs);
+    // poor mutant cats: muffin.__proto__.numLegs ++;
+    // doing this to muffin will mess up all the cats!
+
+
+
+    </script>
+</body>
+</html>

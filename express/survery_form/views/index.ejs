@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+
+    <style>
+            body{
+                background: rgb(134, 18, 18);
+            }
+        #wrapper{
+            background-color: rgb(196, 243, 255);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        </style>
+</head>
+<body>
+
+    <div id="wrapper">
+        <!-- get user data  -->
+        <form action="/add_data" method="post">
+            <label for="">Your name:</label>
+                <input type="text" name="name"><br>
+            <label for="">Dojo location:</label>
+            <select name="location" id="">
+                <option value="mountain view">mountain view</option>
+                <option value="dallas">dallas</option>
+                <option value="new york">new york</option>
+                <option value="seattle">seattle</option>
+            </select><br>
+            <label for="">favorite language:</label>
+            <select name="favLang" id="">
+                    <option value="c++">c++</option>
+                    <option value="java">java</option>
+                    <option value="javascript">javascript</option>
+                    <option value="python">python</option><br>
+                </select><br>
+                <label for="">comment:</label><br>
+                <textarea name="comment" id="" cols="30" rows="10">
+                </textarea>
+                <input type="submit" value="submit">
+        </form>
+        <!-- make a button  -->
+        <a href="/result"> <button type="submit">display page => </button></a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>gplan</title>
+</head>
+<body>
+    
+    <h2>Here are all the users:</h2>
+    <% for (var plan in gplan){  %>
+        <h3>plan Name :  <%= gplan[plan].label %> </h3>
+        <h3> Plan Description:  <%= gplan[plan].Desc %> </h3>
+     <% } %>
+     
+
+
+
+</body>
+</html>

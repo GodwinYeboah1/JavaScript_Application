@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- user info bellow -->
+    <a href="/"> Add New User </a>
+<fieldset disabled="disabled">
+   <legend> <h1>DashBoard Of New User</h1> </legend>
+
+    <% for(var user in users) {%>
+    <div>
+        <p>Name : 
+       <a href="/user/<%= users[user]._id %>"<%= users[user].name %></a> </p>
+    </div>
+    <div>
+        <p>Email : 
+        <%= users[user].email%> </p>
+     </div>
+    <div>
+        <p>password: 
+            <%= users[user].password %> </p>
+    </div><hr>
+    <%}%>
+</fieldset>
+ 
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+
+        #display{
+            background-color: aquamarine;
+            padding: 13px;
+            border-radius: 12px;
+            color: blue;
+            font-size: 13px;
+        }
+        #btn{
+            background-color: cadetblue;
+            color: blue;
+            font-size: 13px;
+        }
+      
+        #wrapper{
+            border: 2px solid black;
+            padding: 23px;
+            background-color: brown;
+        }
+        #user{
+            border: 2px solid black;
+            margin: 25px;
+            padding: 23px;
+            background-color: green;
+        }
+        #delete {
+            border: 2px solid black;
+            margin: 25px;
+            padding: 23px;
+    
+            background-color: cadetblue;
+            color: blue;
+            font-size: 13px;
+        }
+    </style>
+    
+</head>
+<body>
+    <a href="/"> <button id="btn">Display Page</button></a>
+    <h2>display one mongoose </h2>
+    <div id="user">
+        <%=Mongoose.name%>
+        <%=Mongoose.age%>
+    </div>
+    <div id="wrapper">
+        <h2> Edit User bellow</h2>
+    <form action="/mongooses/<%= Mongoose._id %>" method="post">
+        <label for="">Name:</label>
+        <input type="text" name="name" value="enter name"><br>
+        <label for="">age:</label>
+        <input type="text" name="age" value="enter age"><br>
+        <input type="submit" value="Edit me">
+    </form>
+    </div> 
+    <div id="delete">
+        <h2>Click to Delete User </h2>
+        <form action="/mongooses/destroy/<%= Mongoose._id %>" method="post">
+            <input type="submit" value="Delete">
+         </form>
+    </div>
+</body>
+</html>

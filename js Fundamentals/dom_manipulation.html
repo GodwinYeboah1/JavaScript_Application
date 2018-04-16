@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="g">
+        hello world
+    </div>
+
+    <ol id="fruit">
+            <li>Bananas</li>
+            <li>Oranges</li>
+            <li>Apples</li>
+        </ol>
+    <script>
+
+        //  add new content on the webpage 
+        // newMessage = "<h1> look at this dynaminc header </h1>";
+        // let g = "<h3> this is a new message that i just created</h3>"
+    
+        // let message1 = document.getElementById("g").innerHTML = g;
+       
+        let new_fruit = document.createElement('li');
+        // this line above is creating a empyt li
+        new_fruit.innerHTML= "pears";
+        // updates its inner html with a string
+        document.getElementById('fruit').appendChild(new_fruit);
+
+        g_fruit = document.createElement('h1');
+        // created a empyt h1 elements
+
+        // assign it with something 
+        g_fruit.innerHTML = "Godwin testing this new command";
+
+        // appending h1 string to thr fuit ul list 
+        document.getElementById('fruit').appendChild(g_fruit);
+
+
+
+    </script>
+
+
+    
+</body>
+</html>

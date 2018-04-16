@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        function magic_multiply(x, y){
+    // --- your code here ---
+            console.log(x.constructor)
+        if (typeof x==="number" && typeof y=== "number"){
+            var result = x * y;
+            // check if it equal to zero
+            if(result === 0){
+                result = " All input 0 ";
+            }
+            return result;
+        } 
+        if(x.constructor === Array && typeof y ==="number"){
+            var result = [];
+            console.log("in the if statment")
+            for(var i = 0; i < x.length; i++){
+                result.push(x[i] *y);
+            }
+            return result 
+        } 
+        return result;
+    } 
+    test1 = magic_multiply(5,2);
+    test2 = magic_multiply(0,0);
+    test3 = magic_multiply([1,2,3],2);
+    console.log(test3);
+    console.log(test3);
+    </script>
+
+</body>
+</html>

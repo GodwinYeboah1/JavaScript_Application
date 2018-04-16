@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // math 1
+        function zero_negativity(arr){
+
+            result = true;
+
+            for(var i = 0; i < arr.length; i++){
+                if( arr[i] < 0){
+                    result = false;
+                }
+            }
+             return result 
+            //  end of the function
+        }   
+        
+        // display in console
+        // console.log(zero_negativity([1,2,3,4,6]));
+
+        // math 2
+        function is_even(number){
+            var final_result = false;
+
+            if( number % 2==0){
+                final_result = true;
+            }
+            else{
+                final_result = false;
+            }
+
+            return final_result
+        }
+
+        console.log(is_even(1));
+        // math 3
+        function how_many_even(arr){
+            var counter = 0;
+            for(var i=0; i < arr.length; i++){
+
+                if( arr[i] % 2==0){
+                
+                    counter +=1;
+                }
+            }
+            console.log(counter);
+        } 
+        how_many_even([1,3,5,3,10,12]);
+
+        // math 4
+        function create_dummy_array(n){
+            // newRWord = Math.floor(Math.random() * 10);
+            // console.log(newRWord);
+            dummy_array = [];
+            for(var i = 0; i < n;i++){
+                // multply ten to get a whole number 
+                dummy_array.push(Math.floor(Math.random() * 10));
+            }
+            return dummy_array
+        }   
+        console.log(create_dummy_array(5));
+
+        function random_choice(arr){
+            return arr[Math.floor(Math.random() * arr.length)];
+
+        }
+        console.log(random_choice([213223323,2313131,213213,213],[23424234]));
+        
+
+    </script>
+</body>
+</html>

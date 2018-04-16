@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+    // var ninja = 'Libby';
+    //     setTimeout( function (){ console.log(ninja); }, 2000 );
+    //     console.log(ninja); 
+    
+
+    // console.log("NOW: ");
+    //     console.log("Declaring and assigning variable 'ninja'.");
+    //     var ninja = 'Libby';
+
+    //     setTimeout( function myCallbackFunction(){
+    //     console.log("LATER: ")
+    //     console.log(ninja, "LATER"); }, 
+    //     2000
+    //     );
+    //     console.log("Printing ninja value.");
+    // console.log(ninja, "NOW");
+    
+
+    // var a = 2;
+    // var g = [];
+    // var t = {};
+    // var b = function() { console.log("something"); };
+    //         function doSomething(x){
+    //             console.log(typeof(x))
+    //             // console.log(typeof(t))
+    //         }
+
+    //     doSomething(a);
+    //     doSomething(b);
+
+    // function doSomething(possibleCallback) {
+
+    //     if (typeof(possibleCallback) === 'function'){
+
+    //     console.log('possibleCallback is a callback!');
+    //         possibleCallback(); //we can invoke the callback!
+    //     }
+    //     else {
+    //         console.log('possibleCallback: ', possibleCallback, ' is not a callback function.');
+    //     }
+    // }
+    //     function gCallChecker(possibleCallBack){
+    //         if(typeof(possibleCallBack) === 'function'){
+    //             console.log("this is a call back function");
+    //             possibleCallBack();
+
+    //         }else{
+    //             console.log("this not a call back budy");
+
+    //         }
+    //     }
+        // gcallback(function(){
+        //     console.log("this is not a call back ", possibleCallback, "this is something new ");
+        // })
+
+
+    //  gCallChecker(function(){console.log("is this a call back machine");});
+
+
+    // doSomething(function myCallback(){ console.log('yes, I am a callback!') });
+
+    // doSomething('string');
+
+    function makePasta(pasta, makeSauce) {
+  console.log("Boiling water");
+  console.log("Putting " + pasta + " pasta in the water");
+  // create a variable for sauce!
+  var sauce = makeSauce();          // invoke makeSauce, our callback
+  console.log("Mixing sauce");
+  console.log("Pasta is done!");
+  return pasta + " Pasta with " + sauce + " sauce! Voila!";
+}
+function makePesto() {
+  console.log("Making Pesto");
+  return "pesto";
+}
+function makeAlfredo() {
+  console.log("Making Alfredo");
+  return "alfredo";
+}
+// we pass the whole makePesto recipe to makePasta!
+console.log(makePasta("Penne", makePesto));
+// notice lack of parentheses after makePesto.
+// Remember: we want to pass the function, not execute it and pass a return value.
+console.log(makePasta("Farfalle", makeAlfredo));
+
+
+// delegating taskes 
+
+function printResult(doSomething) {
+ var result = doSomething();         // store the return value of the callback parameter
+ console.log(result);                // print the result!
+}
+printResult(function returnFive(){ return 5 })  // this should print "5"
+
+
+function ek(arr,callback){
+    // loop throught the array
+    for (var i = 0; i < arr.length; i++){
+            callback(arr[i]);
+
+    if (arr[i] === 3){
+        alert("this is a new message");
+    }
+    }
+
+}
+    ek([1,2,3,4], function(){alert("i am from the call back")})
+
+
+    </script>
+</body>
+</html>

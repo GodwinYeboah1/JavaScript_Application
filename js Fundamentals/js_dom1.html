@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<script>
+        function appendList(array, id){
+            // finish this function
+            for(var i=0;i<array.length;i++){
+                // create an empty li
+                let new_student = document.createElement("li");
+               
+                // modify its innerHTML content with value of the array
+                new_student.innerHTML = array[i];
+
+                // modify its innerHTML content with a string
+                document.getElementById(id).appendChild(new_student);
+                
+            }
+        }
+
+        
+    </script>
+</body>
+</html>

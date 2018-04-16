@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-color: black;
+        }
+        #header{
+        border: 2px solid black;
+        border-radius:13px;
+        background-color: bisque;
+        padding: 22px;
+        margin: 12px;
+    }
+
+
+    #formSection{
+        border: 2px solid black;
+        border-radius:13px;
+        background-color: brown;
+        padding: 22px;
+        color:rgb(0, 255, 242);
+        font-size: 19px;
+    }
+    #display{
+        background-color: aquamarine;
+        padding: 13px;
+        border-radius: 12px;
+        color: blue;
+        font-size: 13px;
+    }
+    #btn{
+        background-color: cadetblue;
+        color: blue;
+        font-size: 13px;
+    }
+    </style>
+
+</head>
+<body>
+    <div id="header">
+        <h2>Add new mongoose </h2> 
+        <a href="/"> <button id="display" >Display Page</button></a>
+    </div>
+    <div id="formSection">
+        <form action="/mongooses"  method="post">
+        <label for="">Name:</label>
+        <input type="text" name="name"><br>
+        <label for="">age:</label>
+        <input type="text" name="age"><br>
+        <input  id="btn"  type="submit" value="click me">
+        </form>
+    </div>
+
+</body>
+</html>

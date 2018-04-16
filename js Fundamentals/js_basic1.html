@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="content">
+        hello 
+    </div>
+    <script>
+        // basic 1
+        // create array 
+        let x = []
+
+        // push three value to the array
+        x.push("coding", "dojo","rocks");
+        
+        x.pop();
+        // display it in the browser console
+        // log it in the bowser
+        console.log(x);
+
+        // basic 2
+        // created an empyt array
+        const y = [];
+        console.log(y);
+        y.push(88);
+        console.log(y);
+
+        // basic 3
+        let z = [9, 10, 6, 5, -1, 20, 13, 2];
+        console.log(z);
+        z.pop();
+        console.log(z);
+
+        // basic 4
+        let names = ['Kadie', 'Joe', 'Fritz', 'Pierre', 'Alphonso'];
+        console.log(names);
+
+        for(let i in names){
+            // console.log(names[i]);
+           if (names[i].length < 5){
+// only javascript you are aloud to pop give the pop method a index 
+
+                 names.pop(i);
+           }
+          
+        }
+        console.log(names);
+
+        // basic 5
+        function yell(names){
+            // check to see if my name is working
+            // log lower case number
+            console.log(names);
+
+            // change my name to upcase with this method and save it in the same para name
+            // log upper case number
+            names  = names.toUpperCase();
+            console.log(names);
+            return names
+        }
+        newName = yell("godwin");
+        
+
+    
+    </script>
+    
+
+
+
+</body>
+</html>
